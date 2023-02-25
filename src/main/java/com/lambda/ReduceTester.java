@@ -23,20 +23,20 @@ public class ReduceTester {
         pers.add(p5);
         String res = pers.stream()
                 .filter(person -> person.getAge() > 20)
-                .map(person -> person.getlName())
+                .map(person -> person.getLName())
                 .collect(Collectors.joining(","));
         System.out.println(res);
 
         List<Person> lst = pers.stream().collect(Collectors.toList());
         System.out.println("Collecting all persons with out filter");
-        lst.stream().forEach(person -> System.out.println(person.getfName()));
+        lst.stream().forEach(person -> System.out.println(person.getFName()));
 
         System.out.println("Collecting filtered persons");
         List<Person> lst1 = pers.stream()
                         .filter(person -> person.getAge() > 20)
                  //               .map()
                 .collect(Collectors.toList());
-        lst1.stream().forEach(person -> System.out.println(person.getfName()));
+        lst1.stream().forEach(person -> System.out.println(person.getFName()));
 
         System.out.println("Collecting filtered persons in map");
 
