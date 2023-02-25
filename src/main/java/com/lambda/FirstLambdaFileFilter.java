@@ -14,9 +14,10 @@ public class FirstLambdaFileFilter {
         };*/
         //instead of above anonymous class
         FileFilter filter = (File pathName) ->
-                pathName.getName().endsWith(".java");
+            pathName.getName().endsWith(".java");
 
-        File dir = new File("d:/tmp");
+
+        File dir = new File("d:/Newfolder");
         File[] javaFiles = dir.listFiles(filter);
 
         for(File f : javaFiles){
