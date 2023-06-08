@@ -2,7 +2,6 @@ package collections;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class CollectionsTester {
     public static void main (String[] args) {

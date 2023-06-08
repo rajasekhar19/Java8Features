@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ReduceTester {
     public static void main (String[] args) {
@@ -51,6 +52,11 @@ public class ReduceTester {
                 .collect(Collectors.groupingBy(
                         Person :: getAge, Collectors.counting()));
         dwnMap.forEach((key, value) -> System.out.println(value));
+
+        Stream<Person> pStream = pers.stream();
+        pStream.forEach(person -> System.out.println(person.getFName()));
+
+        pStream.forEach(person -> System.out.println(person.getLName()));
 
      }
 
